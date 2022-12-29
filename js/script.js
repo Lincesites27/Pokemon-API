@@ -33,7 +33,17 @@ const renderPokemon = async (pokemon) => { // Reinderizando o pokemon na tela
     pokemonImage.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
     input.value = '';
     searchPokemon = data.id;
-  } else {
+  } 
+ 
+  else if(input.value === 'lince'){
+    pokemonName.innerHTML = "Lince Dev Full Stack";
+    pokemonImage.src = 'img/eu.png'
+    pokemonImage.style.width = '150px';
+   
+    pokemonImage.style.margin = '0 0 -5.5% 0'
+  }
+  
+  else {
     pokemonImage.style.display = 'none';
     pokemonName.innerHTML = 'Tente novamente ';
     pokemonNumber.innerHTML = '';
@@ -44,6 +54,7 @@ const renderPokemon = async (pokemon) => { // Reinderizando o pokemon na tela
 form.addEventListener('submit', (event) => {    // Criando a funçao de submit
   event.preventDefault();                       
   renderPokemon(input.value.toLowerCase());
+
 });
 
 buttonPrev.addEventListener('click', () => { // criando a funçao de click com --
