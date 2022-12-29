@@ -39,7 +39,12 @@ const renderPokemon = async (pokemon) => { // Reinderizando o pokemon na tela
     pokemonName.innerHTML = "Lince Dev Full Stack";
     pokemonImage.src = 'img/eu.png'
     pokemonImage.style.width = '150px';
-   
+    pokemonImage.style.margin = '0 0 -5.5% 0'
+  } 
+  else if(input.value === 'Lince'){
+    pokemonName.innerHTML = "Lince Dev Full Stack";
+    pokemonImage.src = 'img/eu.png'
+    pokemonImage.style.width = '150px';
     pokemonImage.style.margin = '0 0 -5.5% 0'
   }
   
